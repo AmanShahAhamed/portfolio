@@ -94,3 +94,67 @@ const currentYearEl = document.getElementById('currentYear');
 if (currentYearEl) {
   currentYearEl.textContent = new Date().getFullYear();
 }
+
+// =============================================
+// HERO TYPEWRITER ANIMATION
+// =============================================
+const initTypewriter = () => {
+  const line1El = document.getElementById('heroLine1');
+  const line2El = document.getElementById('heroLine2');
+  const cursorEl = document.getElementById('typeCursor');
+
+  if (!line1El || !line2El || !cursorEl) return;
+
+  const text1 = "Software Engineer |";
+  const text2 = "Backend-Focused Full Stack Developer";
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    line1El.textContent = text1;
+    line2El.textContent = text2;
+    return;
+  }
+
+  // Clear initial text for animated typing
+  line1El.textContent = '';
+  line2El.textContent = '';
+
+  // Position cursor right after line 1 initially
+  line1El.after(cursorEl);
+
+  let i = 0;
+  let j = 0;
+  const speedLine1 = 65; // ms per character
+  const speedLine2 = 55; // ms per character
+  const pauseBetweenLines = 320; // ms
+
+  const typeLine1 = () => {
+    if (i < text1.length) {
+      line1El.textContent += text1.charAt(i);
+      i++;
+      setTimeout(typeLine1, speedLine1);
+    } else {
+      setTimeout(() => {
+        // Move cursor to line 2 and begin typing
+        line2El.after(cursorEl);
+        typeLine2();
+      }, pauseBetweenLines);
+    }
+  };
+
+  const typeLine2 = () => {
+    if (j < text2.length) {
+      line2El.textContent += text2.charAt(j);
+      j++;
+      setTimeout(typeLine2, speedLine2);
+    }
+  };
+
+  // Start typing smoothly after hero entrance animation
+  setTimeout(typeLine1, 350);
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initTypewriter);
+} else {
+  initTypewriter();
+}
