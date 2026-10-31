@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -747,95 +747,91 @@
       </div>
     </section>
 
-    <!-- Contact & Recruiter Conversion -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="contact reveal">
-          <!-- Left: heading + desc -->
-          <div class="contact__left">
-            <p class="eyebrow">LET'S CONNECT</p>
-            <h2>Open to new opportunities</h2>
-            <p class="muted">Actively interviewing for Senior Backend Engineer, Node.js / NestJS Developer, and Senior
-              Full Stack roles. Let's discuss how I can contribute to your engineering team.</p>
-          </div>
+    <!-- Contact & Recruiter Conversion (Hero CTA Section) -->
+    <section class="section section--cta" id="contact">
+      <div class="container cta-container reveal">
+        <!-- Status Badge -->
+        <div class="cta-status">
+          <span class="cta-status__dot"></span>
+          <span class="cta-status__text">Ready for Immediate Technical Interview</span>
+        </div>
 
-          <!-- Middle: contact & social channels -->
-          <div class="contact__links">
-            <a href="mailto:moaslam826@gmail.com" class="contact__item">
-              <span class="contact__ic">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="m2 6 10 7L22 6" />
-                </svg>
-              </span>
-              <div>
-                <strong>Email</strong>
-                <small>moaslam826@gmail.com</small>
-              </div>
-            </a>
-            <a href="tel:+916387959740" class="contact__item">
-              <span class="contact__ic">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-              </span>
-              <div>
-                <strong>Phone</strong>
-                <small>+91 6387959740</small>
-              </div>
-            </a>
-            <a href="https://linkedin.com/in/amanshahahamed" class="contact__item" target="_blank" rel="noopener">
-              <span class="contact__ic">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                  <path
-                    d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8h4.9v15.5H.5V8Zm7.5 0h4.7v2.1h.07c.65-1.23 2.24-2.53 4.6-2.53 4.92 0 5.83 3.24 5.83 7.45v8.48h-4.9v-7.52c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.95-2.88 3.97v7.65H8V8Z" />
-                </svg>
-              </span>
-              <div>
-                <strong>LinkedIn</strong>
-                <small>linkedin.com/in/amanshahahamed</small>
-              </div>
-            </a>
-            <a href="https://github.com/AmanShahAhamed" class="contact__item" target="_blank" rel="noopener">
-              <span class="contact__ic">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                  <path
-                    d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.94c.57.1.78-.25.78-.55v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.3-5.26-1.28-5.26-5.7 0-1.26.45-2.3 1.19-3.1-.12-.3-.52-1.49.11-3.1 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.61.23 2.8.11 3.1.74.8 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.08.78 2.18v3.23c0 .31.2.66.79.55A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z" />
-                </svg>
-              </span>
-              <div>
-                <strong>GitHub</strong>
-                <small>github.com/AmanShahAhamed</small>
-              </div>
-            </a>
-          </div>
+        <!-- Headline -->
+        <h2 class="cta-title">
+          Let’s Build High-Throughput<br />
+          <span class="cta-title__grad">Backend Systems Together</span>
+        </h2>
 
-          <!-- Right: CTA button -->
-          <div class="contact__cta">
-            <a href="aman-resume.pdf" class="btn btn--primary btn--big" download="aman-resume.pdf">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
-              </svg>
-              Download Resume
-            </a>
+        <!-- Subtitle Description -->
+        <p class="cta-desc">
+          Looking for a Senior Backend Engineer or Full-Stack Node.js Developer who values test coverage, architectural
+          elegance, and business impact? Let's connect.
+        </p>
+
+        <!-- 3 Action Buttons -->
+        <div class="cta-buttons">
+          <a href="mailto:moaslam826@gmail.com" class="cta-btn cta-btn--primary">
+            <svg class="cta-btn__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+              stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 6 10 7L22 6" />
+            </svg>
+            <span>contact@amanshah.dev</span>
+          </a>
+
+          <a href="https://linkedin.com/in/amanshahahamed" class="cta-btn cta-btn--secondary" target="_blank"
+            rel="noopener">
+            <span>Connect on LinkedIn</span>
+          </a>
+
+          <a href="aman-resume.pdf" class="cta-btn cta-btn--outline" download="aman-resume.pdf">
+            <svg class="cta-btn__icon cta-btn__icon--pdf" viewBox="0 0 24 24" width="18" height="18" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            <span>Download Aman's CV (PDF)</span>
+          </a>
+        </div>
+
+        <!-- Horizontal Divider -->
+        <div class="cta-divider" role="separator"></div>
+
+        <!-- Monospace Metadata Info -->
+        <div class="cta-meta">
+          <div class="cta-meta__row">
+            <span class="cta-meta__label">Location:</span>
+            <span class="cta-meta__val">Noida, India (Open to Remote / Hybrid / Relocation)</span>
+          </div>
+          <div class="cta-meta__row cta-meta__row--sub">
+            <span><span class="cta-meta__label">Notice Period:</span> Available Immediately / Short Notice</span>
+            <span><span class="cta-meta__label">Total Exp:</span> 4+ Years Enterprise Engineering</span>
+            <span><span class="cta-meta__label">Phone:</span> <a href="tel:+916387959740" class="cta-meta__link">+91 6387959740</a></span>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer Bottom Bar -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="currentYear">2026</span> Aman Shah Ahamed. All rights reserved.</p>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container footer__bar">
+      <div class="footer__col footer__col--left">
+        <strong>Aman Shah Ahamed</strong> <span class="footer__bullet">·</span> <span>Software Engineer (Backend &amp; Full-Stack)</span>
+      </div>
+      <div class="footer__col footer__col--center">
+        <span>Designed for High Reliability • Built with Semantic HTML5 &amp; Modern CSS</span>
+        <span id="currentYear" style="display:none;">2026</span>
+      </div>
+      <div class="footer__col footer__col--right">
+        <a href="#home" class="footer__backtotop" id="backToTopBtn">
+          <span>Back to Top</span>
+          <span class="footer__arrow" aria-hidden="true">↑</span>
+        </a>
+      </div>
     </div>
   </footer>
 

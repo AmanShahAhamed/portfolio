@@ -158,3 +158,14 @@ if (document.readyState === 'loading') {
 } else {
   initTypewriter();
 }
+
+// =============================================
+// BACK TO TOP SMOOTH SCROLL
+// =============================================
+const backToTopBtn = document.getElementById('backToTopBtn');
+if (backToTopBtn) {
+  backToTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
