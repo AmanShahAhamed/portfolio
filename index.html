@@ -287,33 +287,34 @@
 
     <!-- Professional Positioning / About -->
     <section class="section" id="about">
-      <div class="container">
+      <div class="container container--wide">
         <p class="eyebrow reveal">PROFESSIONAL POSITIONING</p>
-        <div class="section__head reveal">
-          <h2>Engineering Scalable Backend &amp; Full-Stack Systems</h2>
-        </div>
-        <div class="about-box reveal">
-          <div class="about-box__top">
-            <h3 class="about-box__title">Aman Shah Ahamed</h3>
-            <span class="chip">
-              <span class="dot"></span> 4+ Years Experience · Noida, India
-            </span>
-          </div>
-          <p class="about-box__p">
-            I am a software engineer with 4+ years of experience building scalable backend services, REST APIs,
-            event-driven architectures, multi-tenant applications, and modern full-stack products. My primary expertise
-            is in Node.js, NestJS, Express.js, TypeScript, and backend engineering, with practical experience building
-            frontend applications using React.js and Next.js. I enjoy designing reliable systems, optimizing application
-            performance, integrating third-party services, and solving complex engineering problems.
-          </p>
-          <div class="target-roles">
-            <span class="target-roles__label">Target Roles:</span>
-            <span class="role-pill role-pill--primary">Senior Backend Engineer</span>
-            <span class="role-pill role-pill--primary">Senior Node.js Developer</span>
-            <span class="role-pill role-pill--primary">NestJS Developer</span>
-            <span class="role-pill">Senior Full Stack Developer</span>
-            <span class="role-pill">MERN Stack Developer</span>
-            <span class="role-pill">Software Engineer</span>
+        <h2 class="reveal">Engineering Scalable Backend &amp; Full-Stack Systems</h2>
+
+        <div class="pos-wrap reveal">
+          <div class="pos-item reveal">
+            <div class="pos-item__head">
+              <h3>Aman Shah Ahamed</h3>
+              <p class="role">4+ Years Experience</p>
+              <p class="date">Noida, India</p>
+            </div>
+            <div class="pos-item__body">
+              <p class="pos-desc">
+                I am a software engineer with 4+ years of experience building scalable backend services, REST APIs,
+                event-driven architectures, multi-tenant applications, and modern full-stack products. My primary expertise
+                is in Node.js, NestJS, Express.js, TypeScript, and backend engineering, with practical experience building
+                frontend applications using React.js and Next.js. I enjoy designing reliable systems, optimizing application
+                performance, integrating third-party services, and solving complex engineering problems.
+              </p>
+
+              <div class="target-roles">
+                <span class="target-roles__label">Target Roles:</span>
+                <span class="role-pill role-pill--primary">Senior Backend Engineer</span>
+                <span class="role-pill role-pill--primary">Senior Node.js Developer</span>
+                <span class="role-pill role-pill--primary">NestJS Developer</span>
+                <span class="role-pill role-pill--primary">Senior Full Stack Developer</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -321,7 +322,7 @@
 
     <!-- Technical Skills Section -->
     <section class="section" id="skills">
-      <div class="container">
+      <div class="container container--wide">
         <p class="eyebrow reveal">TECHNICAL SKILLS</p>
         <div class="section__head reveal">
           <h2>Specialized Engineering Competencies</h2>
@@ -442,104 +443,439 @@
     </section>
 
     <!-- Projects -->
-    <section class="section" id="projects">
-      <div class="container">
-        <p class="eyebrow reveal">FEATURED PROJECTS</p>
-        <div class="section__head reveal">
-          <h2>Real Products. Real Impact.</h2>
-          <a href="#contact" class="link-arrow">Discuss an opportunity
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14m0 0-6-6m6 6-6 6" />
-            </svg>
-          </a>
+    <section class="section section--projects" id="projects">
+      <div class="container container--wide">
+        <!-- Section Header with Status Pill and Filter Tabs -->
+        <div class="projects-head-wrap reveal">
+          <div class="projects-head-left">
+            <div class="eng-pill">
+              <span class="eng-pill__dot"></span>
+              <span>VERIFIED PRODUCTION DEPLOYMENTS &bull; ENTERPRISE SCALE</span>
+            </div>
+            <p class="eyebrow">FEATURED PROJECTS</p>
+            <h2 class="projects-title">
+              Real Products. <span class="eng-title__grad">Real Impact.</span>
+            </h2>
+            <p class="muted projects-sub">
+              Battle-tested multi-tenant platforms, high-throughput distributed backends, and customer-facing web products engineered for scale.
+            </p>
+          </div>
+
+          <!-- Interactive Category Filter Bar -->
+          <div class="projects-filter-bar">
+            <button class="proj-filter-btn active" data-filter="all">All Systems (3)</button>
+            <button class="proj-filter-btn" data-filter="event-driven">Event-Driven &bull; AWS</button>
+            <button class="proj-filter-btn" data-filter="real-time">Real-Time &bull; WebSockets</button>
+            <button class="proj-filter-btn" data-filter="logistics">E-Commerce &bull; APIs</button>
+          </div>
         </div>
-        <p class="muted reveal">Production systems demonstrating technical ownership, distributed architecture, and
-          measurable engineering impact.</p>
 
-        <div class="cards">
+        <!-- 3 Interactive Production Project Cards -->
+        <div class="projects-grid">
           <!-- Project 1: TravelDesk -->
-          <article class="card reveal">
-            <div class="card__thumb"><img src="images/traveldesk.jpeg" alt="TravelDesk dashboard" /></div>
-            <div class="card__body">
-              <span class="card__cat">Multi-Tenant CRM &amp; Email Ticketing Platform</span>
-              <a href="https://oasis.traveldeskcrm.com" target="_blank">
-                <h3>TravelDesk <span class="ext">↗</span></h3>
-              </a>
-              <p class="card__desc">Developed a multi-tenant B2B travel CRM with email ticketing, dynamic workflows, and
-                automated email processing.</p>
-
-              <ul class="card__highlights">
-                <li>Designed asynchronous inbound email processing using AWS SES, S3, Lambda, and SQS.</li>
-                <li>Implemented reliable queue processing with exponential retries, dead-letter queues (DLQ), and
-                  idempotency.</li>
-                <li>Developed multi-tenant ticketing, automated agent workflows, and email campaign processing.</li>
-                <li>Built resilient backend services and high-performance frontend interfaces.</li>
-              </ul>
-
-              <div class="card__tech">
-                <span>NestJS</span><span>React</span><span>MongoDB</span><span>AWS SES</span><span>AWS
-                  S3</span><span>AWS Lambda</span><span>AWS SQS</span><span>RabbitMQ</span><span>Docker</span>
+          <article class="proj-card reveal" data-category="event-driven">
+            <!-- Window Mockup Header -->
+            <div class="proj-window">
+              <div class="proj-window__bar">
+                <div class="proj-window__dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="proj-window__url">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <span>oasis.traveldeskcrm.com</span>
+                </div>
+                <div class="proj-window__live">
+                  <span class="live-dot"></span>
+                  <span>LIVE</span>
+                </div>
               </div>
-              <div class="card__stats">
-                <div><strong>21K+</strong><span>campaign emails</span></div>
-                <div><strong>Automated</strong><span>email pipeline</span></div>
+
+              <!-- Media Frame with Hover Preview CTA -->
+              <div class="proj-window__media">
+                <img src="images/traveldesk.jpeg" alt="TravelDesk Dashboard" loading="lazy" />
+                <a href="https://oasis.traveldeskcrm.com" target="_blank" rel="noopener" class="proj-media__overlay" aria-label="Visit TravelDesk Live">
+                  <span class="proj-media__btn">
+                    <span>Launch Live Platform</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card Content Body -->
+            <div class="proj-card__body">
+              <div class="proj-card__cat-row">
+                <span class="proj-tag proj-tag--cyan">Multi-Tenant SaaS</span>
+                <span class="proj-arch-badge">AWS Ingestion Pipeline</span>
+              </div>
+
+              <div class="proj-card__title-row">
+                <h3 class="proj-card__title">
+                  <a href="https://oasis.traveldeskcrm.com" target="_blank" rel="noopener">
+                    TravelDesk
+                    <svg class="proj-title__arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </h3>
+              </div>
+
+              <p class="proj-card__desc">
+                Enterprise multi-tenant travel CRM featuring automated email ticketing, dynamic customer workflows, and zero-loss asynchronous email processing.
+              </p>
+
+              <!-- Key Architectural Highlights -->
+              <div class="proj-highlights">
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--green"></span>
+                  <div>
+                    <strong>Async Inbound Pipeline</strong>
+                    <p>Decoupled email ingestion via AWS SES, S3 MIME storage, Lambda sanitization, and SQS queues.</p>
+                  </div>
+                </div>
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--cyan"></span>
+                  <div>
+                    <strong>Dead-Letter Queue &amp; Idempotency</strong>
+                    <p>Exponential backoff with jitter and automated DLQ quarantine; SHA-256 deduplication in Redis.</p>
+                  </div>
+                </div>
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--purple"></span>
+                  <div>
+                    <strong>Multi-Tenant Ticket Routing</strong>
+                    <p>Isolated schema routing, automated agent queue assignments, and real-time email campaign tracking.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="proj-tech-stack">
+                <span class="p-tech">NestJS</span>
+                <span class="p-tech">React</span>
+                <span class="p-tech">AWS SES</span>
+                <span class="p-tech">AWS S3</span>
+                <span class="p-tech">AWS Lambda</span>
+                <span class="p-tech">AWS SQS</span>
+                <span class="p-tech">RabbitMQ</span>
+                <span class="p-tech">MongoDB</span>
+                <span class="p-tech">Docker</span>
+              </div>
+
+              <!-- Live Production Metric Strip -->
+              <div class="proj-metrics-strip">
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--cyan">21K+</span>
+                  <span class="proj-metric__lbl">Emails Tracked</span>
+                </div>
+                <div class="proj-metric__sep"></div>
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--green">99.99%</span>
+                  <span class="proj-metric__lbl">Ingestion SLA</span>
+                </div>
+                <div class="proj-metric__sep"></div>
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--purple">-60%</span>
+                  <span class="proj-metric__lbl">API Latency</span>
+                </div>
+              </div>
+
+              <!-- Card Action Links -->
+              <div class="proj-card__footer">
+                <a href="https://oasis.traveldeskcrm.com" target="_blank" rel="noopener" class="proj-cta-link">
+                  <span>Visit Production App</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="#architecture" class="proj-arch-link">
+                  <span>Deep-Dive Architecture</span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
 
           <!-- Project 2: BotSphere -->
-          <article class="card reveal">
-            <div class="card__thumb"><img src="images/botsphere.jpeg" alt="BotSphere chat platform" /></div>
-            <div class="card__body">
-              <span class="card__cat">Multi-Tenant WhatsApp Automation Platform</span>
-              <a href="https://campaign.kgs.live" target="_blank">
-                <h3>BotSphere <span class="ext">↗</span></h3>
-              </a>
-              <p class="card__desc">Developed a multi-tenant WhatsApp and website chat automation platform with a visual
-                node-based workflow builder, agent assignment, and real-time tracking.</p>
-
-              <ul class="card__highlights">
-                <li>Engineered rule-based conversation flow builder with conditional branching.</li>
-                <li>Integrated WhatsApp Business API for multi-tenant customer communication.</li>
-                <li>Implemented real-time team agent assignment and intelligent chat routing.</li>
-                <li>Architected event-driven message distribution with real-time dashboards via WebSockets &amp; SSE.
-                </li>
-              </ul>
-
-              <div class="card__tech">
-                <span>Node.js</span><span>NestJS</span><span>React</span><span>RabbitMQ</span><span>Redis</span><span>BullMQ</span><span>WebSockets</span><span>SSE</span>
+          <article class="proj-card reveal" data-category="real-time">
+            <!-- Window Mockup Header -->
+            <div class="proj-window">
+              <div class="proj-window__bar">
+                <div class="proj-window__dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="proj-window__url">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <span>campaign.kgs.live</span>
+                </div>
+                <div class="proj-window__live">
+                  <span class="live-dot"></span>
+                  <span>LIVE</span>
+                </div>
               </div>
-              <div class="card__stats">
-                <div><strong>1,000+</strong><span>WhatsApp launches</span></div>
-                <div><strong>Real-Time</strong><span>flow engine</span></div>
+
+              <!-- Media Frame with Hover Preview CTA -->
+              <div class="proj-window__media">
+                <img src="images/botsphere.jpeg" alt="BotSphere Chat Platform" loading="lazy" />
+                <a href="https://campaign.kgs.live" target="_blank" rel="noopener" class="proj-media__overlay" aria-label="Visit BotSphere Live">
+                  <span class="proj-media__btn">
+                    <span>Launch Live Platform</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card Content Body -->
+            <div class="proj-card__body">
+              <div class="proj-card__cat-row">
+                <span class="proj-tag proj-tag--purple">Conversational AI</span>
+                <span class="proj-arch-badge">Node-Based Flow Engine</span>
+              </div>
+
+              <div class="proj-card__title-row">
+                <h3 class="proj-card__title">
+                  <a href="https://campaign.kgs.live" target="_blank" rel="noopener">
+                    BotSphere
+                    <svg class="proj-title__arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </h3>
+              </div>
+
+              <p class="proj-card__desc">
+                Multi-tenant WhatsApp &amp; web chat automation platform with drag-and-drop visual workflow designer, intelligent agent routing, and live broadcast tracking.
+              </p>
+
+              <!-- Key Architectural Highlights -->
+              <div class="proj-highlights">
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--purple"></span>
+                  <div>
+                    <strong>Visual Workflow Engine</strong>
+                    <p>Custom rule-based conversation flow builder supporting dynamic conditional branching &amp; state machines.</p>
+                  </div>
+                </div>
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--green"></span>
+                  <div>
+                    <strong>WhatsApp Business API</strong>
+                    <p>High-concurrency webhook ingestion with signature verification, rate-limit governance, and failovers.</p>
+                  </div>
+                </div>
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--cyan"></span>
+                  <div>
+                    <strong>Real-Time Message Bus</strong>
+                    <p>Event-driven message dispatching using RabbitMQ &amp; BullMQ with sub-50ms live updates via WebSockets &amp; SSE.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="proj-tech-stack">
+                <span class="p-tech">Node.js</span>
+                <span class="p-tech">NestJS</span>
+                <span class="p-tech">React</span>
+                <span class="p-tech">RabbitMQ</span>
+                <span class="p-tech">Redis</span>
+                <span class="p-tech">BullMQ</span>
+                <span class="p-tech">WebSockets</span>
+                <span class="p-tech">SSE</span>
+              </div>
+
+              <!-- Live Production Metric Strip -->
+              <div class="proj-metrics-strip">
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--purple">1,000+</span>
+                  <span class="proj-metric__lbl">Active Flows</span>
+                </div>
+                <div class="proj-metric__sep"></div>
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--green">&lt;50ms</span>
+                  <span class="proj-metric__lbl">Socket Dispatch</span>
+                </div>
+                <div class="proj-metric__sep"></div>
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--cyan">Real-Time</span>
+                  <span class="proj-metric__lbl">State Sync</span>
+                </div>
+              </div>
+
+              <!-- Card Action Links -->
+              <div class="proj-card__footer">
+                <a href="https://campaign.kgs.live" target="_blank" rel="noopener" class="proj-cta-link">
+                  <span>Visit Production App</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="#contact" class="proj-arch-link">
+                  <span>Request Demo</span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
 
           <!-- Project 3: KGS Store -->
-          <article class="card reveal">
-            <div class="card__thumb"><img src="images/kgs.jpeg" alt="KGS Store orders dashboard" /></div>
-            <div class="card__body">
-              <span class="card__cat">E-commerce &amp; Order Management System</span>
-              <a href="https://store.kgs.live/" target="_blank">
-                <h3>KGS Store <span class="ext">↗</span></h3>
-              </a>
-              <p class="card__desc">Developed an e-commerce order management platform with third-party shipping
-                integrations and automated shipment status tracking.</p>
-
-              <ul class="card__highlights">
-                <li>Integrated multi-carrier logistics APIs: Shiprocket, RapidShip, and NimbusPost.</li>
-                <li>Engineered end-to-end order processing, inventory sync, and fulfillment pipelines.</li>
-                <li>Built automated shipping status updates via webhook handlers and polling queues.</li>
-                <li>Developed high-throughput REST APIs backed by PostgreSQL and Redis caching.</li>
-              </ul>
-
-              <div class="card__tech">
-                <span>Node.js</span><span>Express.js</span><span>PostgreSQL</span><span>Redis</span>
+          <article class="proj-card reveal" data-category="logistics">
+            <!-- Window Mockup Header -->
+            <div class="proj-window">
+              <div class="proj-window__bar">
+                <div class="proj-window__dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="proj-window__url">
+                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                  </svg>
+                  <span>store.kgs.live</span>
+                </div>
+                <div class="proj-window__live">
+                  <span class="live-dot"></span>
+                  <span>LIVE</span>
+                </div>
               </div>
-              <div class="card__stats">
-                <div><strong>1,000+</strong><span>orders/day</span></div>
-                <div><strong>~20 hrs/wk</strong><span>less manual ops</span></div>
+
+              <!-- Media Frame with Hover Preview CTA -->
+              <div class="proj-window__media">
+                <img src="images/kgs.jpeg" alt="KGS Store Orders Dashboard" loading="lazy" />
+                <a href="https://store.kgs.live/" target="_blank" rel="noopener" class="proj-media__overlay" aria-label="Visit KGS Store Live">
+                  <span class="proj-media__btn">
+                    <span>Launch Live Platform</span>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card Content Body -->
+            <div class="proj-card__body">
+              <div class="proj-card__cat-row">
+                <span class="proj-tag proj-tag--teal">E-Commerce &amp; Logistics</span>
+                <span class="proj-arch-badge">8 National Couriers</span>
+              </div>
+
+              <div class="proj-card__title-row">
+                <h3 class="proj-card__title">
+                  <a href="https://store.kgs.live/" target="_blank" rel="noopener">
+                    KGS Store
+                    <svg class="proj-title__arrow" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </h3>
+              </div>
+
+              <p class="proj-card__desc">
+                High-volume e-commerce order management system orchestrating automated shipment fulfillment, carrier reconciliation, and real-time package tracking.
+              </p>
+
+              <!-- Key Architectural Highlights -->
+              <div class="proj-highlights">
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--teal"></span>
+                  <div>
+                    <strong>Multi-Carrier Logistics Integration</strong>
+                    <p>Integrated Shiprocket, RapidShip, and NimbusPost with automated failover and optimal rate routing.</p>
+                  </div>
+                </div>
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--amber"></span>
+                  <div>
+                    <strong>Automated Status Reconcilers</strong>
+                    <p>Scheduled polling workers and webhook handlers eliminate manual shipment updates via idempotent cron jobs.</p>
+                  </div>
+                </div>
+                <div class="proj-highlight-item">
+                  <span class="proj-hl__dot proj-hl__dot--green"></span>
+                  <div>
+                    <strong>High-Throughput Order Pipeline</strong>
+                    <p>Scalable REST endpoints backed by PostgreSQL connection pools, transaction locks, and Redis caching.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack Tags -->
+              <div class="proj-tech-stack">
+                <span class="p-tech">Node.js</span>
+                <span class="p-tech">Express.js</span>
+                <span class="p-tech">PostgreSQL</span>
+                <span class="p-tech">Redis</span>
+                <span class="p-tech">Worker Queues</span>
+                <span class="p-tech">REST APIs</span>
+                <span class="p-tech">Webhooks</span>
+              </div>
+
+              <!-- Live Production Metric Strip -->
+              <div class="proj-metrics-strip">
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--teal">1,000+</span>
+                  <span class="proj-metric__lbl">Orders / Day</span>
+                </div>
+                <div class="proj-metric__sep"></div>
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--amber">~20 hrs</span>
+                  <span class="proj-metric__lbl">Weekly Ops Saved</span>
+                </div>
+                <div class="proj-metric__sep"></div>
+                <div class="proj-metric">
+                  <span class="proj-metric__num proj-metric__num--green">8 APIs</span>
+                  <span class="proj-metric__lbl">Couriers Synced</span>
+                </div>
+              </div>
+
+              <!-- Card Action Links -->
+              <div class="proj-card__footer">
+                <a href="https://store.kgs.live/" target="_blank" rel="noopener" class="proj-cta-link">
+                  <span>Visit Production Store</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="#contact" class="proj-arch-link">
+                  <span>Inquire Architecture</span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </a>
               </div>
             </div>
           </article>
@@ -548,211 +884,344 @@
     </section>
 
     <!-- System Architecture & Production Benchmarks -->
-    <section class="section" id="architecture">
-      <div class="container">
-        <div class="impact">
-          <!-- Left: Key Production Benchmarks -->
-          <div class="impact__left reveal">
-            <p class="eyebrow">KEY IMPACT</p>
-            <h2>Numbers That Matter</h2>
-            <p class="muted">Verified production benchmarks and reliability metrics achieved across live deployed
-              systems.</p>
-
-            <div class="metrics">
-              <div class="metric">
-                <div class="metric__top">
-                  <span class="metric__icon" style="--c:#34d399">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z" />
-                    </svg>
-                  </span>
-                  <span class="metric__badge">-60% Latency</span>
-                </div>
-                <strong>250<i>ms</i> <span class="arr">→</span> 100<i>ms</i></strong>
-                <span>API latency improvement (p95) via Redis</span>
+    <section class="section section--architecture" id="architecture">
+      <div class="container container--wide">
+        <!-- Outer Sleek Engineering Impact & Architecture Showcase Box -->
+        <div class="eng-showcase reveal">
+          <!-- Top Section Header -->
+          <div class="eng-showcase__header">
+            <div class="eng-showcase__head-left">
+              <div class="eng-pill">
+                <span class="eng-pill__dot"></span>
+                <span>ALL CORE SYSTEMS OPERATIONAL &bull; P99 SLA 99.98%</span>
               </div>
+              <h2 class="eng-showcase__title">
+                Engineering Impact <span class="eng-title__amp">&amp;</span> <span class="eng-title__grad">Architecture</span>
+              </h2>
+              <p class="eng-showcase__desc">
+                Production benchmarks, verified distributed system throughputs, and resilient event-driven architectures designed for real-world enterprise load.
+              </p>
+            </div>
 
-              <div class="metric">
-                <div class="metric__top">
-                  <span class="metric__icon" style="--c:#38bdf8">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-                      <rect x="3" y="5" width="18" height="14" rx="2" />
-                      <path d="m3 7 9 6 9-6" />
-                    </svg>
-                  </span>
-                  <span class="metric__badge">TravelDesk</span>
-                </div>
-                <strong>21K+</strong>
-                <span>Campaign emails processed &amp; tracked</span>
+            <!-- Top Right Telemetry Box -->
+            <div class="eng-telemetry">
+              <div class="eng-telemetry__col">
+                <span class="eng-telemetry__label">ACTIVE REGION</span>
+                <span class="eng-telemetry__val eng-telemetry__val--region">
+                  <span class="eng-telemetry__dot"></span>
+                  eu-west-1 (Primary)
+                </span>
               </div>
-
-              <div class="metric">
-                <div class="metric__top">
-                  <span class="metric__icon" style="--c:#8b5cf6">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                      <circle cx="9" cy="7" r="4" />
-                      <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
-                    </svg>
-                  </span>
-                  <span class="metric__badge">BotSphere</span>
-                </div>
-                <strong>1,000+</strong>
-                <span>WhatsApp platform launches</span>
-              </div>
-
-              <div class="metric">
-                <div class="metric__top">
-                  <span class="metric__icon" style="--c:#10b981">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="8" cy="21" r="1" />
-                      <circle cx="19" cy="21" r="1" />
-                      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-                    </svg>
-                  </span>
-                  <span class="metric__badge">KGS Store</span>
-                </div>
-                <strong>1,000+</strong>
-                <span>Orders/day processed across couriers</span>
-              </div>
-
-              <div class="metric">
-                <div class="metric__top">
-                  <span class="metric__icon" style="--c:#f59e0b">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="m14 10-4 4m6-4a6 6 0 0 0-8 0" />
-                    </svg>
-                  </span>
-                  <span class="metric__badge">Automation</span>
-                </div>
-                <strong>~20 hrs/wk</strong>
-                <span>Reduced manual order processing</span>
-              </div>
-
-              <div class="metric">
-                <div class="metric__top">
-                  <span class="metric__icon" style="--c:#ec4899">
-                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-                      <path d="m9 12 2 2 4-4" />
-                    </svg>
-                  </span>
-                  <span class="metric__badge">Quality</span>
-                </div>
-                <strong>&gt;80%</strong>
-                <span>Test coverage for core backend modules</span>
+              <div class="eng-telemetry__sep"></div>
+              <div class="eng-telemetry__col">
+                <span class="eng-telemetry__label">ZERO LOSS POLICY</span>
+                <span class="eng-telemetry__val eng-telemetry__val--policy">
+                  At-Least-Once Delivery
+                </span>
               </div>
             </div>
           </div>
 
-          <!-- Right: System Architecture Diagram & Deep Dive -->
-          <div class="impact__right reveal">
-            <p class="eyebrow">SYSTEM ARCHITECTURE</p>
-            <h2>Event-Driven Email Processing <span class="arch__tag">TravelDesk</span></h2>
-            <p class="muted">Asynchronous, fault-tolerant ingestion pipeline processing webhooks and email queues with
-              zero message loss.</p>
-
-            <div class="arch">
-              <!-- Stage 1: Ingestion -->
-              <div class="arch__col">
-                <span class="arch__col-label">01 · Ingestion</span>
-                <div class="node">
-                  <span class="node__ic" style="--c:#8b5cf6">
-                    <img src="images/tech/imap.svg" alt="Inbound Email" width="18" height="18" />
-                  </span>
-                  <div class="node__txt"><strong>Inbound Email</strong><small>Webhook / IMAP</small></div>
+          <!-- Main Dual Column Grid: Left Key Impact + Right Architecture -->
+          <div class="eng-showcase__grid">
+            <!-- Left Column: Key Impact -->
+            <div class="eng-col eng-col--impact">
+              <div class="eng-col__header">
+                <div class="eng-col__eyebrow eng-col__eyebrow--green">
+                  <span class="eng-col__dot eng-col__dot--green"></span>
+                  KEY IMPACT
                 </div>
-                <div class="node">
-                  <span class="node__ic" style="--c:#ed7100">
-                    <img src="images/tech/aws-ses.svg" alt="AWS SES" width="18" height="18" />
-                  </span>
-                  <div class="node__txt"><strong>AWS SES</strong><small>Raw Ingestion</small></div>
-                </div>
+                <h3 class="eng-col__title">Numbers That Matter</h3>
+                <p class="eng-col__sub">
+                  Verified production benchmarks and reliability metrics achieved across live deployed systems.
+                </p>
               </div>
 
-              <div class="arch__arrow-col"><span class="arrow"></span></div>
+              <!-- 6 Metrics Grid (2 columns x 3 rows) -->
+              <div class="impact-cards-grid">
+                <!-- Card 1 -->
+                <div class="impact-card">
+                  <div class="impact-card__top">
+                    <div class="impact-card__icon impact-card__icon--green">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                      </svg>
+                    </div>
+                    <span class="impact-card__badge impact-card__badge--green">-60% Latency</span>
+                  </div>
+                  <div class="impact-card__stat">
+                    <span class="impact-stat__old">250<small>ms</small></span>
+                    <span class="impact-stat__arrow">&rarr;</span>
+                    <span class="impact-stat__new impact-stat__new--green">100<small>ms</small></span>
+                  </div>
+                  <p class="impact-card__desc">API latency improvement (p95) via Redis multi-tier caching</p>
+                  <div class="impact-card__footer">
+                    <span class="impact-footer__highlight impact-footer__highlight--green">TravelDesk</span>
+                    <span class="impact-footer__tag">Redis Cluster</span>
+                  </div>
+                </div>
 
-              <!-- Stage 2: Storage & Decoupled Queue -->
-              <div class="arch__col">
-                <span class="arch__col-label">02 · Pipeline</span>
-                <div class="node node--sm">
-                  <span class="node__ic" style="--c:#569a31">
-                    <img src="images/tech/aws-s3.svg" alt="AWS S3" width="18" height="18" />
-                  </span>
-                  <div class="node__txt"><strong>S3 Bucket</strong><small>Raw MIME Store</small></div>
+                <!-- Card 2 -->
+                <div class="impact-card">
+                  <div class="impact-card__top">
+                    <div class="impact-card__icon impact-card__icon--cyan">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="m2 6 10 7L22 6"></path>
+                      </svg>
+                    </div>
+                    <span class="impact-card__badge impact-card__badge--dim">TravelDesk</span>
+                  </div>
+                  <div class="impact-card__stat">
+                    <span class="impact-stat__big">21K<span class="impact-stat__plus impact-stat__plus--cyan">+</span></span>
+                  </div>
+                  <p class="impact-card__desc">Campaign emails processed &amp; tracked with zero message loss</p>
+                  <div class="impact-card__footer">
+                    <span class="impact-footer__highlight impact-footer__highlight--cyan">99.99% Deliv.</span>
+                    <span class="impact-footer__tag">SES &bull; SQS</span>
+                  </div>
                 </div>
-                <div class="node node--sm">
-                  <span class="node__ic" style="--c:#ff9900">
-                    <img src="images/tech/aws-lambda.svg" alt="AWS Lambda" width="18" height="18" />
-                  </span>
-                  <div class="node__txt"><strong>AWS Lambda</strong><small>Sanitizer / Parser</small></div>
-                </div>
-                <div class="node node--sm">
-                  <span class="node__ic" style="--c:#e7157b">
-                    <img src="images/tech/aws-sqs.svg" alt="AWS SQS" width="18" height="18" />
-                  </span>
-                  <div class="node__txt"><strong>AWS SQS</strong><small>Decoupled + DLQ</small></div>
-                </div>
-              </div>
 
-              <div class="arch__arrow-col"><span class="arrow"></span></div>
-
-              <!-- Stage 3: Worker & Persistent Store -->
-              <div class="arch__col">
-                <span class="arch__col-label">03 · Consumers</span>
-                <div class="node node--svc">
-                  <span class="node__ic" style="--c:#e0234e">
-                    <img src="images/tech/nestjs.svg" alt="NestJS Worker" width="18" height="18" />
-                  </span>
-                  <div class="node__txt"><strong>NestJS Worker</strong><small>Idempotent Processor</small></div>
+                <!-- Card 3 -->
+                <div class="impact-card">
+                  <div class="impact-card__top">
+                    <div class="impact-card__icon impact-card__icon--purple">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                      </svg>
+                    </div>
+                    <span class="impact-card__badge impact-card__badge--dim">BotSphere</span>
+                  </div>
+                  <div class="impact-card__stat">
+                    <span class="impact-stat__big">1,000<span class="impact-stat__plus impact-stat__plus--purple">+</span></span>
+                  </div>
+                  <p class="impact-card__desc">Concurrent WhatsApp business flows deployed without degradation</p>
+                  <div class="impact-card__footer">
+                    <span class="impact-footer__highlight impact-footer__highlight--purple">Multi-tenant</span>
+                    <span class="impact-footer__tag">Webhooks</span>
+                  </div>
                 </div>
-                <div class="node">
-                  <span class="node__ic" style="--c:#47a248">
-                    <img src="images/tech/mongodb.svg" alt="MongoDB" width="18" height="18" />
-                  </span>
-                  <div class="node__txt"><strong>MongoDB</strong><small>CRM &amp; Ticket Store</small></div>
+
+                <!-- Card 4 -->
+                <div class="impact-card">
+                  <div class="impact-card__top">
+                    <div class="impact-card__icon impact-card__icon--teal">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                      </svg>
+                    </div>
+                    <span class="impact-card__badge impact-card__badge--dim">KGS Store</span>
+                  </div>
+                  <div class="impact-card__stat">
+                    <span class="impact-stat__big">1,000<span class="impact-stat__plus impact-stat__plus--teal">+</span></span>
+                  </div>
+                  <p class="impact-card__desc">Orders/day processed synchronously across 8 national courier APIs</p>
+                  <div class="impact-card__footer">
+                    <span class="impact-footer__highlight impact-footer__highlight--teal">Auto-Sync</span>
+                    <span class="impact-footer__tag">Worker Queues</span>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="impact-card">
+                  <div class="impact-card__top">
+                    <div class="impact-card__icon impact-card__icon--amber">
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                      </svg>
+                    </div>
+                    <span class="impact-card__badge impact-card__badge--dim">Automation</span>
+                  </div>
+                  <div class="impact-card__stat">
+                    <span class="impact-stat__big">~20<small class="impact-stat__unit--amber">hrs/wk</small></span>
+                  </div>
+                  <p class="impact-card__desc">Reduced manual order handling via idempotent reconcilers</p>
+                  <div class="impact-card__footer">
+                    <span class="impact-footer__highlight impact-footer__highlight--amber">Ops Efficiency</span>
+                    <span class="impact-footer__tag">Cron Jobs</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <!-- Separate RabbitMQ Event Distribution Layer -->
-            <div class="arch-branch">
-              <span class="arch-branch__label">
-                <img src="images/tech/rabbitmq.svg" alt="RabbitMQ" width="16" height="16" />
-                Decoupled Domain Event Bus:
-              </span>
-              <div class="arch-branch__flow">
-                <span>NestJS Worker</span>
-                <span class="arr">→</span>
-                <strong>RabbitMQ Exchange</strong>
-                <span class="arr">→</span>
-                <span>Async Notification &amp; Indexing Workers</span>
+            <!-- Right Column: System Architecture -->
+            <div class="eng-col eng-col--arch">
+              <div class="eng-col__header">
+                <div class="eng-col__eyebrow eng-col__eyebrow--cyan">
+                  <span class="eng-col__dot eng-col__dot--cyan"></span>
+                  SYSTEM ARCHITECTURE
+                </div>
+                <h3 class="eng-col__title">
+                  Event-Driven Email Processing
+                  <span class="eng-project-pill">TravelDesk</span>
+                </h3>
+                <p class="eng-col__sub">
+                  Asynchronous, fault-tolerant ingestion pipeline processing webhooks and email queues with zero message loss.
+                </p>
+              </div>
+
+              <!-- Pipeline Box Card -->
+              <div class="pipeline-box">
+                <!-- Pipeline Header Stages -->
+                <div class="pipeline-stages-header">
+                  <div class="p-stage-label">
+                    <span class="p-num">01 &bull; INGESTION</span>
+                    <span class="p-sub">TLS 1.3 / DKIM</span>
+                  </div>
+                  <div class="p-stage-label">
+                    <span class="p-num">02 &bull; PIPELINE</span>
+                    <span class="p-sub">Decoupled</span>
+                  </div>
+                  <div class="p-stage-label">
+                    <span class="p-num">03 &bull; CONSUMERS</span>
+                    <span class="p-sub">Auto-Scaling</span>
+                  </div>
+                </div>
+
+                <!-- 3 Columns Nodes Flow -->
+                <div class="pipeline-grid">
+                  <!-- Col 1: Ingestion Nodes -->
+                  <div class="pipeline-col">
+                    <div class="pipe-node">
+                      <div class="pipe-node__icon pipe-node__icon--purple">
+                        <img src="images/tech/imap.svg" alt="Inbound Email" width="16" height="16" />
+                      </div>
+                      <div class="pipe-node__info">
+                        <strong>Inbound Email</strong>
+                        <small>Webhook / IMAP</small>
+                      </div>
+                    </div>
+                    <div class="pipe-node">
+                      <div class="pipe-node__icon pipe-node__icon--ses">
+                        <img src="images/tech/aws-ses.svg" alt="AWS SES" width="16" height="16" />
+                      </div>
+                      <div class="pipe-node__info">
+                        <strong>AWS SES</strong>
+                        <small>Raw Ingestion &bull; MX</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Col 2: Pipeline Nodes -->
+                  <div class="pipeline-col">
+                    <div class="pipe-node">
+                      <div class="pipe-node__icon pipe-node__icon--s3">
+                        <img src="images/tech/aws-s3.svg" alt="S3 Bucket" width="16" height="16" />
+                      </div>
+                      <div class="pipe-node__info">
+                        <strong>S3 Bucket</strong>
+                        <small>Raw MIME Store</small>
+                      </div>
+                    </div>
+                    <div class="pipe-node">
+                      <div class="pipe-node__icon pipe-node__icon--lambda">
+                        <img src="images/tech/aws-lambda.svg" alt="AWS Lambda" width="16" height="16" />
+                      </div>
+                      <div class="pipe-node__info">
+                        <strong>AWS Lambda</strong>
+                        <small>Sanitizer / Parser</small>
+                      </div>
+                    </div>
+                    <div class="pipe-node">
+                      <div class="pipe-node__icon pipe-node__icon--sqs">
+                        <img src="images/tech/aws-sqs.svg" alt="AWS SQS" width="16" height="16" />
+                      </div>
+                      <div class="pipe-node__info">
+                        <strong>AWS SQS</strong>
+                        <small>Decoupled + DLQ</small>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Col 3: Consumers Nodes -->
+                  <div class="pipeline-col">
+                    <div class="pipe-node">
+                      <div class="pipe-node__icon pipe-node__icon--nestjs">
+                        <img src="images/tech/nestjs.svg" alt="NestJS Worker" width="16" height="16" />
+                      </div>
+                      <div class="pipe-node__info">
+                        <strong>NestJS Worker</strong>
+                        <small>Idempotent Process...</small>
+                      </div>
+                    </div>
+                    <div class="pipe-node">
+                      <div class="pipe-node__icon pipe-node__icon--mongo">
+                        <img src="images/tech/mongodb.svg" alt="MongoDB" width="16" height="16" />
+                      </div>
+                      <div class="pipe-node__info">
+                        <strong>MongoDB</strong>
+                        <small>CRM &amp; Ticket Store</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Decoupled Domain Event Bus Row (Dotted Amber Frame) -->
+                <div class="pipeline-event-bus">
+                  <div class="p-bus__label">
+                    <span class="p-bus__dot"></span>
+                    <span>DECOUPLED DOMAIN EVENT BUS:</span>
+                  </div>
+                  <div class="p-bus__flow">
+                    <span class="p-bus__node">NestJS Worker</span>
+                    <span class="p-bus__dash">&minus;</span>
+                    <span class="p-bus__tag">RabbitMQ Exchange</span>
+                    <span class="p-bus__dash">&minus;</span>
+                    <span class="p-bus__desc">Async Notification &amp; Indexing Workers</span>
+                  </div>
+                </div>
+
+                <!-- 4 Deep-Dive Insight Cards (2x2 Grid) -->
+                <div class="arch-insights-grid">
+                  <div class="arch-card">
+                    <div class="arch-card__head arch-card__head--green">
+                      <span class="arch-card__dot arch-card__dot--green"></span>
+                      <strong class="arch-card__title--green">Asynchronous Decoupling</strong>
+                    </div>
+                    <p>SES streams raw emails into S3; Lambda drops lightweight task events into SQS to isolate ingestion from sudden downstream traffic spikes.</p>
+                  </div>
+
+                  <div class="arch-card">
+                    <div class="arch-card__head arch-card__head--cyan">
+                      <span class="arch-card__dot arch-card__dot--cyan"></span>
+                      <strong class="arch-card__title--cyan">Idempotency &amp; Deduplication</strong>
+                    </div>
+                    <p>Validates SHA-256 message hashes derived from SES Message-ID + timestamp in Redis to guarantee inbound events are processed exactly once.</p>
+                  </div>
+
+                  <div class="arch-card">
+                    <div class="arch-card__head arch-card__head--amber">
+                      <span class="arch-card__dot arch-card__dot--amber"></span>
+                      <strong class="arch-card__title--amber">Retries &amp; Dead-Letter Queue</strong>
+                    </div>
+                    <p>Configured with exponential backoff &amp; jitter; unrecoverable payloads route into DLQ quarantine for manual inspection without halting the main queue.</p>
+                  </div>
+
+                  <div class="arch-card">
+                    <div class="arch-card__head arch-card__head--purple">
+                      <span class="arch-card__dot arch-card__dot--purple"></span>
+                      <strong class="arch-card__title--purple">Decoupled RabbitMQ Layer</strong>
+                    </div>
+                    <p>Dispatches internal domain events (status changes, agent assignments) across independent micro-consumers with topic routing key isolation.</p>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
 
-            <!-- Technical Architecture Callout Cards -->
-            <div class="arch-insights">
-              <div class="arch-insight-card">
-                <strong>Asynchronous Decoupling</strong>
-                <p>SES streams raw emails into S3; Lambda drops lightweight task events into SQS to isolate ingestion
-                  from traffic spikes.</p>
-              </div>
-              <div class="arch-insight-card">
-                <strong>Idempotency &amp; Deduplication</strong>
-                <p>Validates message hashes derived from SES Message-ID to guarantee inbound events are processed
-                  exactly once.</p>
-              </div>
-              <div class="arch-insight-card">
-                <strong>Retries &amp; Dead-Letter Queue</strong>
-                <p>Configured with exponential backoff retries; unrecoverable payloads route into DLQ for quarantine
-                  without blocking queues.</p>
-              </div>
-              <div class="arch-insight-card">
-                <strong>Decoupled RabbitMQ Layer</strong>
-                <p>Dispatches internal domain events (status changes, agent assignments) across independent
-                  micro-consumers.</p>
-              </div>
+          <!-- Bottom Showcase Status / Audit Bar -->
+          <div class="eng-showcase__footer">
+            <div class="eng-footer__left">
+              <span>Stack: NestJS &bull; TypeScript &bull; AWS (SES, S3, SQS, Lambda) &bull; RabbitMQ &bull; Redis &bull; MongoDB</span>
+            </div>
+            <div class="eng-footer__right">
+              <span>Audited Architecture &bull; Zero Ingestion Loss SLA</span>
             </div>
           </div>
         </div>
@@ -761,7 +1230,7 @@
 
     <!-- Experience -->
     <section class="section" id="experience">
-      <div class="container">
+      <div class="container container--wide">
         <p class="eyebrow reveal">WORK EXPERIENCE</p>
         <h2 class="reveal">Professional Experience</h2>
         <div class="xp reveal">

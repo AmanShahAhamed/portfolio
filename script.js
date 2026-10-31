@@ -96,14 +96,15 @@ if (currentYearEl) {
 }
 
 // =============================================
-// HERO TYPEWRITER ANIMATION
+// HERO TYPEWRITER ANIMATION (REPLAY ON VIEWPORT FOCUS)
 // =============================================
 const initTypewriter = () => {
   const line1El = document.getElementById('heroLine1');
   const line2El = document.getElementById('heroLine2');
   const cursorEl = document.getElementById('typeCursor');
+  const heroTitle = document.querySelector('.hero__title');
 
-  if (!line1El || !line2El || !cursorEl) return;
+  if (!line1El || !line2El || !cursorEl || !heroTitle) return;
 
   const text1 = "Software Engineer |";
   const text2 = "Backend-Focused Full Stack Developer";
@@ -114,43 +115,82 @@ const initTypewriter = () => {
     return;
   }
 
-  // Clear initial text for animated typing
-  line1El.textContent = '';
-  line2El.textContent = '';
+  let typeTimer = null;
+  let isTyping = false;
 
-  // Position cursor right after line 1 initially
-  line1El.after(cursorEl);
-
-  let i = 0;
-  let j = 0;
-  const speedLine1 = 65; // ms per character
-  const speedLine2 = 55; // ms per character
-  const pauseBetweenLines = 320; // ms
-
-  const typeLine1 = () => {
-    if (i < text1.length) {
-      line1El.textContent += text1.charAt(i);
-      i++;
-      setTimeout(typeLine1, speedLine1);
-    } else {
-      setTimeout(() => {
-        // Move cursor to line 2 and begin typing
-        line2El.after(cursorEl);
-        typeLine2();
-      }, pauseBetweenLines);
+  const stopTyping = () => {
+    if (typeTimer) {
+      clearTimeout(typeTimer);
+      typeTimer = null;
     }
+    isTyping = false;
   };
 
-  const typeLine2 = () => {
-    if (j < text2.length) {
-      line2El.textContent += text2.charAt(j);
-      j++;
-      setTimeout(typeLine2, speedLine2);
-    }
+  const startTyping = () => {
+    stopTyping();
+    isTyping = true;
+
+    // Clear text for clean typing effect
+    line1El.textContent = '';
+    line2El.textContent = '';
+    line1El.after(cursorEl);
+
+    let i = 0;
+    let j = 0;
+    const speedLine1 = 55; // ms per character
+    const speedLine2 = 45; // ms per character
+    const pauseBetweenLines = 280; // ms
+
+    const typeLine1 = () => {
+      if (!isTyping) return;
+      if (i < text1.length) {
+        line1El.textContent += text1.charAt(i);
+        i++;
+        typeTimer = setTimeout(typeLine1, speedLine1);
+      } else {
+        typeTimer = setTimeout(() => {
+          if (!isTyping) return;
+          line2El.after(cursorEl);
+          typeLine2();
+        }, pauseBetweenLines);
+      }
+    };
+
+    const typeLine2 = () => {
+      if (!isTyping) return;
+      if (j < text2.length) {
+        line2El.textContent += text2.charAt(j);
+        j++;
+        typeTimer = setTimeout(typeLine2, speedLine2);
+      } else {
+        isTyping = false;
+      }
+    };
+
+    typeTimer = setTimeout(typeLine1, 200);
   };
 
-  // Start typing smoothly after hero entrance animation
-  setTimeout(typeLine1, 350);
+  // Observe hero title: replay typing whenever it scrolls back into view
+  let hasInitiallyFired = false;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        startTyping();
+        hasInitiallyFired = true;
+      } else {
+        if (hasInitiallyFired) {
+          stopTyping();
+          // Hide text when scrolled down so it re-types fresh when scrolling back up
+          line1El.textContent = '';
+          line2El.textContent = '';
+        }
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  observer.observe(heroTitle);
 };
 
 if (document.readyState === 'loading') {
@@ -167,5 +207,41 @@ if (backToTopBtn) {
   backToTopBtn.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// =============================================
+// FEATURED PROJECTS CATEGORY FILTER
+// =============================================
+const filterBtns = document.querySelectorAll('.proj-filter-btn');
+const projCards = document.querySelectorAll('.proj-card');
+
+if (filterBtns.length && projCards.length) {
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      // Toggle active button state
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter cards with smooth fade
+      projCards.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 20);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(10px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 220);
+        }
+      });
+    });
   });
 }
