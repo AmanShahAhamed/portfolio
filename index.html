@@ -81,67 +81,132 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero Section: Developer Workspace Frame -->
     <section class="hero" id="home">
-      <div class="hero__inner">
-        <div class="hero__text container-left">
-          <span class="badge"><span class="dot"></span> 4+ Years Experience</span>
-          <h1 class="hero__title" aria-label="Software Engineer | Backend-Focused Full Stack Developer">
-            <span id="heroLine1">Software Engineer |</span><br />
-            <span class="grad" id="heroLine2">Backend-Focused Full Stack Developer</span><span class="type-cursor"
-              id="typeCursor" aria-hidden="true"></span>
-          </h1>
-          <p>I build scalable backend systems, event-driven architectures, and modern full-stack applications using
-            Node.js, NestJS, TypeScript, React, and cloud technologies. With 4+ years of experience, I focus on building
-            reliable products, optimizing performance, and solving real-world engineering challenges.</p>
-          <div class="hero__cta">
-            <a href="#projects" class="btn btn--primary">View Projects
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14m0 0-6-6m6 6-6 6" />
-              </svg>
-            </a>
-            <a href="aman-resume.pdf" class="btn btn--ghost" download="aman-resume.pdf">Download
-              Resume
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
-              </svg>
-            </a>
+      <div class="container hero-workspace-container">
+        <!-- macOS IDE / Browser Window Frame -->
+        <div class="ide-window">
+          <!-- Window Header Bar -->
+          <div class="ide-window__header">
+            <div class="ide-window__controls">
+              <span class="ide-dot ide-dot--red"></span>
+              <span class="ide-dot ide-dot--yellow"></span>
+              <span class="ide-dot ide-dot--green"></span>
+            </div>
+            <div class="ide-window__tab">
+              <span class="ide-tab__prompt">&gt;_</span>
+              <span class="ide-tab__title">aman-shah.dev/hero.tsx</span>
+            </div>
+            <div class="ide-window__status">
+              <span class="ide-status__dot"></span>
+              <span class="ide-status__code">200 OK</span>
+              <span class="ide-status__sep">•</span>
+              <span class="ide-status__ping">42ms</span>
+            </div>
           </div>
-          <div class="hero__tags">
-            <span class="chip">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-                <ellipse cx="12" cy="5" rx="9" ry="3" />
-                <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5" />
-                <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3" />
-              </svg>
-              Backend Engineering
-            </span>
-            <span class="chip">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
-                <path d="m18.36 5.64-2.12 2.12M7.76 16.24l-2.12 2.12M18.36 18.36l-2.12-2.12M7.76 7.76 5.64 5.64" />
-              </svg>
-              Event-Driven Systems
-            </span>
-            <span class="chip">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-              </svg>
-              Scalable Architectures
-            </span>
+
+          <!-- Window Content Body (Split Grid: Left Pitch + Right Terminal) -->
+          <div class="ide-window__body">
+            <!-- Left Column: Pitch & Headline -->
+            <div class="hero__pitch">
+              <div class="hero__badge">
+                <span class="dot"></span>
+                <span>4+ Years Production Experience</span>
+              </div>
+
+              <h1 class="hero__title" aria-label="Software Engineer | Backend-Focused Full Stack Developer">
+                <span id="heroLine1">Software Engineer |</span><br />
+                <span class="grad" id="heroLine2">Backend-Focused Full Stack Developer</span><span class="type-cursor"
+                  id="typeCursor" aria-hidden="true"></span>
+              </h1>
+
+              <p class="hero__desc">
+                Architecting resilient backend systems, event queues, and modern applications with <strong>Node.js</strong>, <strong>NestJS</strong>, <strong>TypeScript</strong>, <strong>React</strong>, and cloud microservices. Focused on sub-100ms latency, zero message-loss queues, and driving measurable engineering impact.
+              </p>
+
+              <div class="hero__actions">
+                <a href="#projects" class="btn btn--cta-glow">
+                  <span>View Projects</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="aman-resume.pdf" class="btn btn--cta-dark" download="aman-resume.pdf">
+                  <span>Download CV</span>
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+                  </svg>
+                </a>
+              </div>
+
+              <div class="hero__chips">
+                <span class="hero__chip">
+                  <span class="chip-dot"></span> Event-Driven
+                </span>
+                <span class="hero__chip">
+                  <span class="chip-dot"></span> Distributed Queues
+                </span>
+                <span class="hero__chip">
+                  <span class="chip-dot"></span> Sub-100ms APIs
+                </span>
+              </div>
+            </div>
+
+            <!-- Right Column: Professional Portrait + Floating Tech Telemetry -->
+            <div class="hero__media-col">
+              <div class="hero__photo-wrapper">
+                <!-- Ambient Glow behind photo -->
+                <div class="hero__photo-glow" aria-hidden="true"></div>
+
+                <!-- Floating System Status Tag (Top-Right) -->
+                <div class="hero__floating-card hero__floating-card--top">
+                  <span class="floating-card__dot"></span>
+                  <div class="floating-card__content">
+                    <span class="floating-card__label">System Telemetry</span>
+                    <span class="floating-card__val">Redis: 0.8ms &bull; BullMQ Active</span>
+                  </div>
+                </div>
+
+                <!-- Aman Portrait Image -->
+                <div class="hero__photo-frame">
+                  <img src="images/aman.png" alt="Aman Shah Ahamed — Software Engineer" class="hero__photo-img" />
+                </div>
+
+                <!-- Floating Terminal Command Chip (Bottom-Left) -->
+                <div class="hero__floating-card hero__floating-card--bottom">
+                  <span class="floating-card__prompt">&gt;_</span>
+                  <div class="floating-card__content">
+                    <span class="floating-card__cmd">systemctl status cluster</span>
+                    <span class="floating-card__sub">&check; 12 nodes syncing &bull; 0% DLQ error</span>
+                  </div>
+                </div>
+
+                <!-- Handwritten accent -->
+                <span class="scribble" aria-hidden="true">Build<br />Scalable<br />Systems</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="hero__media">
-          <div class="hero__photo">
-            <img src="images/aman.png" alt="Aman Shah Ahamed" />
+
+          <!-- Window Status Bar (Vim / IDE style) -->
+          <div class="ide-window__footer">
+            <div class="ide-footer__left">
+              <span class="ide-mode-badge">NORMAL</span>
+              <span class="ide-footer__item">UTF-8</span>
+              <span class="ide-footer__item">TypeScript</span>
+              <span class="ide-footer__item">React</span>
+            </div>
+            <div class="ide-footer__right">
+              <span class="ide-footer__metric">uptime: 99.99%</span>
+              <span class="ide-footer__sep">&bull;</span>
+              <span class="ide-footer__metric">p95 &lt; 100ms</span>
+            </div>
           </div>
-          <span class="scribble">Build<br />Scalable<br />Systems</span>
         </div>
       </div>
 
       <!-- Quick Tech Stack Strip -->
-      <div class="container">
+      <div class="container hero-techstrip-container">
         <div class="techstrip reveal">
           <div class="techstrip__label">
             <strong>Core Technologies</strong>
